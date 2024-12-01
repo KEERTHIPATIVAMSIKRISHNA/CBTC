@@ -227,6 +227,49 @@ body {
         max-width: 100%;
     }
 }
+@media (max-width: 100px) {
+    /* Home image adjustment for mobile */
+    .home-img {
+        max-width: 100%; /* Ensures the image takes up full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust social media icons layout for mobile */
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centers social media icons */
+    }
+
+    /* Home section layout for mobile */
+    .home {
+        flex-direction: column;
+        padding: 40px 5%; /* Reduced padding for smaller screens */
+        text-align: center;
+    }
+
+    /* Home content adjustments */
+    .home-content {
+        max-width: 100%;
+        padding: 0 20px; /* Add some padding on the sides for mobile */
+    }
+
+    /* Headings adjustment */
+    .home-content h1 {
+        font-size: 30px; /* Smaller heading for mobile */
+        line-height: 1.2;
+    }
+
+    .home-content h3 {
+        font-size: 20px; /* Smaller subheading for mobile */
+    }
+
+    /* Additional adjustments if necessary for layout */
+    .home-content p {
+        font-size: 16px; /* Adjust paragraph text for better readability */
+    }
+}
+
 
 @keyframes slideRight {
     0% {
