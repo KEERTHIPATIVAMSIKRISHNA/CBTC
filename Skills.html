@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Keerthipati Vamsi Krishna Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: background 0.3s;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: color 0.3s;
+            opacity: 0;
+            animation: slideTop 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #0ef;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 100px 10%;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(to bottom, #1f242d, #121417);
+            position: relative;
+            z-index: 10;
+        }
+
+        .skills h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+            opacity: 0;
+            animation: slideBottom 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .skills p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: slideLeft 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .skill-item p {
+            font-size: 1.1rem;
+            color: #bbb;
+        }
+
+        .skill-item:hover {
+            background: #0ef;
+            transform: translateY(-5px);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+        }
+
+        /* Social media icons under skills */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            opacity: 0;
+            animation: slideTop 2s ease forwards;
+            animation-delay: 2s;
+        }
+
+        .social-media a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+
+        .social-media a:hover {
+            background: #0ef;
+            color: #1f242d;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .social-media a:active {
+            transform: scale(1);
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .skill-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideTop {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottom {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="Conatctus.html">Achievements</a>
+            <a href="services.html">Services</a>
+            <a href="Conatctus.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <p>Here are some of the key skills that I have developed as a full-stack web developer. I am continuously expanding my knowledge and expertise to stay up-to-date with modern technologies.</p>
+
+        <div class="skill-list">
+            <div class="skill-item">
+                <h3>Frontend Development</h3>
+                <p>HTML, CSS, JavaScript, React, Angular</p>
+            </div>
+            <div class="skill-item">
+                <h3>Backend Development</h3>
+                <p>Node.js, Express, Python, Django</p>
+            </div>
+            <div class="skill-item">
+                <h3>Database Management</h3>
+                <p>MySQL, MongoDB, PostgreSQL</p>
+            </div>
+            <div class="skill-item">
+                <h3>Version Control</h3>
+                <p>Git, GitHub, GitLab</p>
+            </div>
+            <div class="skill-item">
+                <h3>IOT</h3>
+                <p>Basic understanding of IoT concepts and implementation</p>
+            </div>
+            <div class="skill-item">
+                <h3>Leadership</h3>
+                <p>Organized, motivated, and skilled in community service, leadership, and event coordination as an NSS volunteer.</p>
+            </div>
+        </div>
+
+        <!-- Social media icons under skills -->
+        <div class="social-media">
+            <a href="mailto:example@gmail.com"><i class='bx bxl-gmail'></i></a>
+            <a href="https://www.linkedin.com/in/keerthipati-vamsi-krishna"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://wa.me/yourwhatsappphone"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://twitter.com/yourtwitterhandle"><i class='bx bxl-twitter'></i></a>
+        </div>

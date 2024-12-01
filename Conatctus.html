@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Keerthipati Vamsi Krishna Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: background 0.3s;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: color 0.3s;
+            opacity: 0;
+            animation: slideTop 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #0ef;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 10%;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(to bottom, #1f242d, #121417);
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+            opacity: 0;
+            animation: slideBottom 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: slideLeft 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background: #333;
+            border: none;
+            padding: 15px;
+            font-size: 1rem;
+            color: #fff;
+            border-radius: 8px;
+            resize: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border: 2px solid #0ef;
+            box-shadow: 0 4px 20px rgba(0, 238, 255, 0.4);
+        }
+
+        .contact-form button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background: #0ef;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 238, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #1f242d;
+            color: #0ef;
+            box-shadow: 0 8px 20px rgba(0, 238, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .contact-form button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0, 238, 255, 0.3);
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-media a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            border-radius: 50%;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-media a:hover {
+            background: #0ef;
+            color: #1f242d;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .social-media a:active {
+            transform: scale(1);
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                width: 80%;
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideTop {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottom {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="services.html">Services</a>
+            <a href="Conatctus.html" class="active">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to discuss a project, feel free to reach out to me. I'm always open to new opportunities and collaborations.</p>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="mailto:example@gmail.com"><i class='bx bxl-gmail'></i></a>
+            <a href="https://www.linkedin.com/in/keerthipati-vamsi-krishna"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://wa.me/yourwhatsappphone"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://twitter.com/yourtwitterhandle"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </section>
+</body>
+</html>

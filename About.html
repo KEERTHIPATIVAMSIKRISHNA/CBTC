@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Keerthipati Vamsi Krishna Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff;
+            overflow-x: hidden;
+            padding-bottom: 70px; /* Space for social media icons */
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: background 0.3s;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: color 0.3s;
+            opacity: 0;
+            animation: slideTop 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #0ef;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 10% 50px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(to bottom, #1f242d, #121417);
+            position: relative;
+            z-index: 10;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+            opacity: 0;
+            animation: slideBottom 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: slideLeft 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .about img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #0ef;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            animation: zoomIn 2s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        .about img:hover{
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);        
+        }
+
+        .nss-volunteer {
+            margin-top: 3rem;
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 4rem auto;
+            text-align: left;
+            color: #fff;
+            opacity: 0;
+            animation: slideLeft 2s ease forwards;
+            animation-delay: 2s;
+        }
+
+        .nss-volunteer h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .nss-volunteer p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        /* Social Media Icons */
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 10%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer .social-media a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-media a:hover {
+    background-color: #0ef;
+    transform: scale(1.1);
+}
+
+.footer .social-media a:active {
+    transform: scale(1);
+    background-color: #1f242d;
+}
+.social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            opacity: 0;
+            animation: slideTop 2s ease forwards;
+            animation-delay: 2s;
+        }
+
+        .social-media a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none; /* No underline */
+        }
+
+        .social-media a:hover {
+            background: #0ef;
+            color: #1f242d;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .social-media a:active {
+            transform: scale(1);
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+        }
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 5%;
+    }
+
+    .footer .social-media {
+        gap: 10px;
+    }
+}
+
+        @media (max-width: 768px) {
+            .social-media {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideTop {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottom {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="Conatctus.html">Achievements</a>
+            <a href="services.html">Services</a>
+            <a href="Conatctus.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Keerthipati Vamsi Krishna, a passionate full-stack web developer with expertise in both front-end and back-end technologies. With a focus on building responsive and dynamic websites, I thrive on creating intuitive and seamless user experiences.</p>
+        <p>My goal is to continuously improve my skills, learn new technologies, and provide valuable solutions to the digital world. I'm always up for a challenge and eager to work on innovative projects that push the boundaries of web development.</p>
+
+        <img src="home-img.jpeg" alt="Keerthipati Vamsi Krishna">
+    </section>
+
+    <!-- NSS Volunteer Section -->
+
+    <section class="nss-volunteer">
+        <section class="nss-volunteer-list">
+            <h3>National Service Scheme (NSS) Volunteer</h3>
+            <p>I am an active NSS volunteer, contributing to community service and development activities. I participated in various initiatives that involved promoting social awareness, environmental conservation, and assisting underprivileged communities.</p>
+            <p>Through NSS, I gained valuable leadership, teamwork, and problem-solving skills, while also making a positive impact on society.</p>
+        </section>
+    </section>
+
+    <footer>
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="mailto:example@gmail.com"><i class='bx bxl-gmail'></i></a>
+        <a href="https://www.linkedin.com/in/keerthipati-vamsi-krishna"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://wa.me/yourwhatsappphone"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://twitter.com/yourtwitterhandle"><i class='bx bxl-twitter'></i></a>
+    </div>
+</footer>
