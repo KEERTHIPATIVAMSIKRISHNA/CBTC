@@ -39,22 +39,15 @@
             text-decoration: none;
             font-weight: 600;
             cursor: default;
-            opacity: 0;
-            animation: slideRight 2s ease forwards;
-            animation-delay: 0.5s;
         }
 
         .navbar a {
-            display: inline-block;
             font-size: 18px;
             color: #fff;
             text-decoration: none;
             font-weight: 500;
             margin-left: 35px;
             transition: color 0.3s;
-            opacity: 0;
-            animation: slideTop 2s ease forwards;
-            animation-delay: 0.5s;
         }
 
         .navbar a:hover,
@@ -66,10 +59,7 @@
         .contact {
             padding: 100px 10%;
             text-align: center;
-            color: #fff;
             background: linear-gradient(to bottom, #1f242d, #121417);
-            position: relative;
-            z-index: 10;
         }
 
         .contact h2 {
@@ -77,9 +67,6 @@
             font-weight: 600;
             margin-bottom: 20px;
             color: #fff;
-            opacity: 0;
-            animation: slideBottom 2s ease forwards;
-            animation-delay: 0.5s;
         }
 
         .contact p {
@@ -88,11 +75,7 @@
             color: #bbb;
             max-width: 800px;
             margin: 0 auto;
-            text-align: justify;
             margin-bottom: 30px;
-            opacity: 0;
-            animation: slideLeft 2s ease forwards;
-            animation-delay: 1s;
         }
 
         .contact-form {
@@ -112,14 +95,6 @@
             color: #fff;
             border-radius: 8px;
             resize: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border: 2px solid #0ef;
-            box-shadow: 0 4px 20px rgba(0, 238, 255, 0.4);
         }
 
         .contact-form button {
@@ -131,20 +106,12 @@
             border: none;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 238, 255, 0.3);
             transition: all 0.3s ease;
         }
 
         .contact-form button:hover {
             background: #1f242d;
             color: #0ef;
-            box-shadow: 0 8px 20px rgba(0, 238, 255, 0.5);
-            transform: translateY(-3px);
-        }
-
-        .contact-form button:active {
-            transform: translateY(0);
-            box-shadow: 0 4px 10px rgba(0, 238, 255, 0.3);
         }
 
         /* Social Media Icons */
@@ -167,19 +134,11 @@
             text-decoration: none;
             font-size: 20px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .social-media a:hover {
             background: #0ef;
             color: #1f242d;
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
-        }
-
-        .social-media a:active {
-            transform: scale(1);
-            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -187,86 +146,56 @@
                 width: 80%;
             }
         }
-
-        @keyframes slideRight {
-            0% {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0px);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideLeft {
-            0% {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0px);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideTop {
-            0% {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0px);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideBottom {
-            0% {
-                transform: translateY(-100px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0px);
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Header Section with Navigation -->
-    <header class="header">
-        <a href="index.html" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="services.html">Services</a>
-            <a href="Conatctus.html" class="active">Contact Us</a>
-        </nav>
-    </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to discuss a project, feel free to reach out to me. I'm always open to new opportunities and collaborations.</p>
+<!-- Header Section with Navigation -->
+<header class="header">
+    <a href="index.html" class="logo">Portfolio</a>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="services.html">Services</a>
+        <a href="contactus.html" class="active">Contact Us</a>
+    </nav>
+</header>
 
-        <!-- Contact Form -->
+<!-- Contact Section -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to discuss a project, feel free to reach out to me. I'm always open to new opportunities and collaborations.</p>
+
+    <!-- Contact Form -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="cd466ca8-8cd6-4e7e-8ba1-4a19d54d8039">
+
         <div class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" onclick="showMessage()">Send Message</button>
+            <p id="confirmation"></p>
         </div>
+    </form>
 
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <a href="mailto:example@gmail.com"><i class='bx bxl-gmail'></i></a>
-            <a href="https://www.linkedin.com/in/keerthipati-vamsi-krishna"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://wa.me/yourwhatsappphone"><i class='bx bxl-whatsapp'></i></a>
-            <a href="https://twitter.com/yourtwitterhandle"><i class='bx bxl-twitter'></i></a>
-        </div>
-    </section>
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="mailto:vamsichinna57@gmail.com"><i class='bx bxl-gmail'></i></a>
+        <a href="https://www.linkedin.com/in/keerthipati-vamsi-krishna"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://wa.me/9121730982"><i class='bx bxl-whatsapp'></i></a>
+       
+    </div>
+</section>
+
+<!-- JavaScript for Message Confirmation -->
+<script>
+    function showMessage() {
+        document.getElementById("confirmation").innerHTML = "Your message will be sent successfully!";
+    }
+</script>
+
 </body>
 </html>
